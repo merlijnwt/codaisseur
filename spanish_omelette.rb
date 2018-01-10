@@ -1,3 +1,4 @@
+# Define helper things
 def print_divider
     puts "*" * 40
     puts "\n"
@@ -8,6 +9,7 @@ def print_progress_bar
     puts "\n"
 end
 
+# Define constants 
 NUM_POTATOES = 5
 NUM_EGGS = 6
 
@@ -19,3 +21,11 @@ ingredients = [
   { name: 'salt', quantity: 'some' },
 ]
 
+puts "*    Let's cook a Spanish Omelette!    *"
+print_divider
+
+puts "You need the following ingredients:"
+
+ingredients.each do |ingredient|
+  puts "* #{ingredient[:quantity]} #{ingredient[:name]}"
+end
